@@ -100,9 +100,12 @@ function esVocal(letra) {
    else if (letra === "o"){
       return ("Es vocal");
    }
-   else if (letra === "u"){
+   else if (letra === "i"){
       return ("Es vocal");
    }
+   else if (letra === "u"){
+      return ("Es vocal");
+   }   
    else 
    return ("Dato incorrecto");
 }

@@ -20,9 +20,8 @@ function tienenMismaLongitud(str1, str2) {
    // Tu código:
    if (str1.length === str2.length) {
       return true;
-   }
-  
-    return false;
+   }  
+   else return false;
 }
 
 tienenMismaLongitud("hola","bola");
@@ -33,9 +32,8 @@ function menosQueNoventa(num) {
    // Tu código:
    if (num < 90) {
       return true;
-    }
-  
-    return false;
+   }
+   else return false;
 }
 
 menosQueNoventa(92);

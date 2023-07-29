@@ -50,7 +50,7 @@ function obtenerResto(x, y) {
    return x % y;
 }
 
-obtenerResto(21&3)
+obtenerResto(21, 3)
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
