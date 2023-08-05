@@ -58,9 +58,7 @@ function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar True si está, o False si no está.
    // Tu código:
-    let contiene = [array];
-   let resultado = contiene.includes(elemento);
-   return resultado;
+   return array.includes(elemento);
 }
 
 function agregarNumeros(arrayOfNums) {
@@ -159,18 +157,48 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+   const mesesP = ["Enero", "Marzo", "Noviembre"];
+   const mesesE = [];
+
+   for (let i = 0; i < array.length; i++) {
+      if (mesesP.includes(array[i])) {
+         mesesE.push(array[i]);
+      }
+    }
+
+    if (mesesE.length === 3) {
+      return mesesE;
+   } else {
+      return "No se encontraron los meses pedidos";
+   }
 }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   const tabla = [];
+
+   for (let i = 0; i <= 10; i++) {
+      tabla.push(6 * i);
+   }
+
+   return tabla;
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+   const mayores = [];
+
+   for (let i = 0; i < array.length; i++) {
+      if (array[i] > 100) {
+         mayores.push(array[i]);
+      }
+   }
+
+   return mayores;
 }
 
 /* ----------------------------------------------------------------------------------
@@ -184,6 +212,22 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   const nuevoValor = [];
+    let iteracion = 0;
+
+    while (iteracion < 10) {
+        num += 2;
+        nuevoValor.push(num);
+
+        iteracion++;
+
+        if (num === iteracion) {
+            return "Se interrumpió la ejecución";
+            break; 
+        }
+    }
+
+    return nuevoValor;
 }
 
 function continueStatement(num) {
@@ -193,6 +237,21 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   const nuevosValor = [];
+    let iteracion = 0;
+
+    while (iteracion < 10) {
+        iteracion++;
+
+        if (iteracion === 5) {
+            continue;
+        }
+
+        num += 2;
+        nuevosValor.push(num);
+    }
+
+    return nuevosValor;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
