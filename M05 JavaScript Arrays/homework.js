@@ -89,6 +89,8 @@ function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
+   let mayor = Math.max(...arrayOfNums);
+   return mayor;
 }
 
 function multiplicarArgumentos() {
@@ -96,11 +98,27 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   let result = 1;
+   if (arguments.length == 0){
+      return 0;
+   } else {
+      for (let i = 0; i < arguments.length; i++){
+         result = result * arguments[i]
+      }
+      return result;
+   }
 }
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
+   let elementos = 0;
+   for (let i = 0; i < array.length; i++){
+      if(array[i] > 18){
+         elementos++;
+      }
+   }
+   return elementos;
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -108,18 +126,32 @@ function diaDeLaSemana(numeroDeDia) {
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
+   if(numeroDeDia == 1 || numeroDeDia == 7){
+      return "Es fin de semana";
+   } else return "Es dia laboral";
 }
 
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar True si el entero inicia con 9 y False en otro caso.
    // Tu código:
+   if (num.toString().startsWith('9')) {
+      return true;
+   } else {
+      return false;
+   } 
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar True.
    // Caso contrario retornar False.
    // Tu código:
+   for (let i = 1; i < array.length; i++) {
+      if (array[i] !== array[0]) {
+          return false;
+      }
+  }
+  return true;
 }
 
 function mesesDelAño(array) {
