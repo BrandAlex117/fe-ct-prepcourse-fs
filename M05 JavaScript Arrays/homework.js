@@ -22,7 +22,7 @@ function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
-   let masUno = array.map((num) => {
+   let masUno = array.map(num => {
       return num + 1;
    });
    return masUno;
@@ -33,7 +33,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
    // Retorna el arreglo.
    // Tu código:
    array.push(elemento);
-   return array
+   return array;
 }
 
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -41,7 +41,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
    // Retorna el arreglo.
    // Tu código:
    array.unshift(elemento);
-   return array
+   return array;
 }
 
 function dePalabrasAFrase(palabras) {
