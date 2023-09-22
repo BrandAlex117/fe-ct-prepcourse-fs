@@ -65,11 +65,8 @@ function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
-   var sum = 0;
-   for (let i = 0; i < arrayOfNums.length; i++) {
-      sum = sum + arrayOfNums[i];
-   }
-   return sum;
+   const suma = arrayOfNums.reduce((valorAnterior, valorActual) => valorAnterior + valorActual, 0);
+   return suma;
 }
 
 function promedioResultadosTest(resultadosTest) {
@@ -78,7 +75,7 @@ function promedioResultadosTest(resultadosTest) {
    // Tu código:
    let sum = 0;
    for (let i = 0; i < resultadosTest.length; i++){
-      sum = sum + resultadosTest[i];
+      sum += resultadosTest[i];
    }
    return sum/resultadosTest.length;
 }
@@ -133,11 +130,7 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar True si el entero inicia con 9 y False en otro caso.
    // Tu código:
-   if (num.toString().startsWith('9')) {
-      return true;
-   } else {
-      return false;
-   } 
+   return num.toString().startsWith('9')
 }
 
 function todosIguales(array) {
@@ -166,7 +159,7 @@ function mesesDelAño(array) {
       }
     }
 
-    if (mesesE.length === 3) {
+   if (mesesE.length === 3) {
       return mesesE;
    } else {
       return "No se encontraron los meses pedidos";
@@ -221,13 +214,12 @@ function breakStatement(num) {
 
         iteracion++;
 
-        if (num === iteracion) {
-            return "Se interrumpió la ejecución";
-            break; 
-        }
-    }
-
-    return nuevoValor;
+      if (num === iteracion) {
+         return "Se interrumpió la ejecución";
+         break; 
+      }
+   }
+   return nuevoValor;
 }
 
 function continueStatement(num) {

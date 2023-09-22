@@ -52,8 +52,8 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
    // El parámetro "objetoMisterioso" posee una propiedad con el nombre "numeroMisterioso".
    // Debes multiplicar este número por 5 y retornar el resultado.
    // Tu código:
-   let numeroMisterioso = objetoMisterioso.numeroMisterioso;
-   let resultado = numeroMisterioso * 5;
+   let numeroMisterio = objetoMisterioso.numeroMisterioso;
+   let resultado = numeroMisterio * 5;
    return resultado;
 }
 
@@ -145,7 +145,7 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
       const descuento = this.precio * this.porcentajeDeDescuento;
       const precioFinal = this.precio - descuento;
       return precioFinal;
-   };
+   }
    return objetoProducto;
 }
 
